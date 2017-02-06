@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:text="ABOUT"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/credits_textView1"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:text=
+"Soundcool OSC App\nversion 1.0\n© 2016, Universitat Politècnica de València\nsoundcool.org"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/credits_textView2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:maxLines = "100"
+        android:scrollbars = "vertical"
+        android:text=
+"Soundcool is a collaborative system for music education and sound creation using smartphones, tablets, Kinect, MAX/MSP/Jitter and Open Sound Control.\n\nCredits:\nGroup of Performing Arts and Technology\nPerformingARTech.blogs.upv.es\nUniversitat Politècnica de València (Spain)\nSupported by Generalitat Valenciana grant AICO/2015/120\nSoundcool disclaimer at soundcool.org\n\nJavaOSC: Copyright (c) 2002-2006, C. Ramakrishnan / Illposed Software. All rights reserved.
+"/>
+
+
+
+
+</LinearLayout>

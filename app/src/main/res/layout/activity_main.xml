@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:orientation="vertical">
+
+        <!-- Logo pequeño -->
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+            <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_above="@+id/text_version"
+                    android:id="@+id/logo_pequeno"
+                    android:src="@drawable/logo_pequeno"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OSC App. v. 1.0"
+                    android:id="@+id/text_version"
+                    android:layout_centerInParent="true"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="soundcool.org"
+                    android:autoLink="web"
+                    android:layout_below="@+id/text_version"
+                    android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+        <!-- botones -->
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Layouts"
+                    android:onClick="irOtraActividad"
+                    android:layout_above="@+id/texto_centrado_invisible"
+                    android:layout_centerHorizontal="true"/>
+
+            <!-- Texto Invisible para Centrar -->
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/texto_centrado_invisible"/>
+
+            <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="About"
+                    android:id="@+id/buttonAbout"
+                    android:onClick="irCreditos"
+                    android:layout_below="@+id/texto_centrado_invisible"
+                    android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+        <!-- Settings -->
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Settings"
+                    android:textSize="20dp"
+                    android:id="@+id/textViewSettings"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Host IP"
+                    android:id="@+id/textViewHostIP"
+                    android:layout_below="@+id/textViewSettings"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editTextIP"
+                    android:layout_alignBaseline="@+id/textViewHostIP"
+                    android:layout_toRightOf="@+id/textViewSettings"
+                    android:layout_toEndOf="@+id/textViewSettings" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Port"
+                    android:id="@+id/textViewPort"
+                    android:layout_below="@+id/textViewHostIP"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+
+            <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/editTextPort"
+                    android:layout_alignBaseline="@+id/textViewPort"
+                    android:layout_alignRight="@+id/editTextIP"
+                    android:layout_alignEnd="@+id/editTextIP"
+                    android:layout_alignLeft="@+id/editTextIP"
+                    android:layout_alignStart="@+id/editTextIP" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <!-- Logo grande -->
+    <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo_grande"/>
+
+    </RelativeLayout>
+</LinearLayout>

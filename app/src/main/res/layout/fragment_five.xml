@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#70A83B"
+    tools:context="org.soundcool.upv.oscapp.FiveFragment">
+
+    <!-- Primera linea de controles de arriba -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5">
+
+        <!-- Aqui van el toggle de Loop
+        pongo un RelativeLayout para poder centrar el texto-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cs5_toggle_container"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp">
+            <ToggleButton
+                android:layout_width="@dimen/my_toggle"
+                android:layout_height="@dimen/my_toggle"
+                android:background="@drawable/toggle"
+                android:textOff=""
+                android:textOn=""
+                android:id="@+id/cs5_toggle"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/my_text_size"
+                android:textColor="#000"
+                android:text="Loop"
+                android:id="@+id/cs5_label_toggle"
+                android:layout_below="@+id/cs5_toggle"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <!-- Aqui van el el boton de Clear
+        pongo un RelativeLayout para poder centrar el texto-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cs5_clear_container"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp"
+            android:layout_marginEnd="15dp">
+            <Button
+                android:layout_width="@dimen/my_button"
+                android:layout_height="@dimen/my_button"
+                android:background="@drawable/button"
+                android:text="C"
+                android:textSize="@dimen/my_text_size"
+                android:textColor="#000"
+                android:id="@+id/cs5_buttonClear"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/my_text_size"
+                android:textColor="#000"
+                android:text="Clear"
+                android:id="@+id/cs5_label_buttonClear"
+                android:layout_below="@+id/cs5_buttonClear"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <!-- Aqui van el el boton de Start
+        pongo un RelativeLayout para poder centrar el texto-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cs5_start_container"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/cs5_clear_container"
+            android:layout_toStartOf="@+id/cs5_clear_container"
+            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp">
+            <Button
+                android:layout_width="@dimen/my_button"
+                android:layout_height="@dimen/my_button"
+                android:background="@drawable/button"
+                android:text="S"
+                android:textSize="@dimen/my_text_size"
+                android:textColor="#000"
+                android:id="@+id/cs5_buttonStart"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/my_text_size"
+                android:textColor="#000"
+                android:text="Start"
+                android:id="@+id/cs5_label_buttonStart"
+                android:layout_below="@+id/cs5_buttonStart"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cs5_fader1"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/cs5_toggle_container"
+            android:layout_toEndOf="@+id/cs5_toggle_container"
+            android:layout_toLeftOf="@+id/cs5_start_container"
+            android:layout_toStartOf="@+id/cs5_start_container"
+            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginRight="35dp"
+            android:layout_marginEnd="35dp"
+            android:background="@drawable/fader"
+            android:thumb="@drawable/fader_thumb"
+            android:progressTint="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="@dimen/my_text_size"
+            android:paddingRight="2dp"
+            android:paddingLeft="2dp"
+            android:textColor="#000"
+            android:background="#fff"
+            android:id="@+id/cs5_display"
+            android:layout_above="@+id/cs5_fader1"
+            android:layout_alignLeft="@+id/cs5_fader1"
+            android:layout_alignStart="@+id/cs5_fader1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/my_text_size"
+            android:textColor="#000"
+            android:text="Duration (sec.)"
+            android:id="@+id/cs5_label_fader1"
+            android:layout_above="@+id/cs5_fader1"
+            android:layout_toRightOf="@+id/cs5_display"
+            android:layout_toEndOf="@+id/cs5_display"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"/>
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="3">
+
+
+        <!-- Multislider aqui-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="20"
+            android:orientation="horizontal"
+            android:id="@+id/cs5_ViewGroup1"
+            android:background="#db2828"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar1"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar2"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar3"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar4"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar5"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar6"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar7"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar8"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar9"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar10"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar11"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar12"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar13"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar14"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar15"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar16"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar17"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar18"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar19"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+            <org.soundcool.upv.oscapp.SeekBarMultislider
+                android:id="@+id/cs5_seekBar20"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/multi_fader"
+                android:thumb="@drawable/multi_fader_thumb"
+                android:progressTint="#000"
+                android:clickable="false"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="#f5707a"
+        tools:context="org.soundcool.upv.oscapp.FourFragment">
+
+    <!-- faders y botones -->
+    <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="5">
+
+        <!-- Slider 1 -->
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+            <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cs1_fader1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:progress="50"
+                    android:background="@drawable/fader"
+                    android:thumb="@drawable/fader_thumb"
+                    android:progressTint="#ffffff" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Slider 1"
+                    android:textSize="@dimen/my_text_size"
+                    android:textColor="#000"
+                    android:id="@+id/cs1_label_fader1"
+                    android:layout_below="@+id/cs1_fader1"
+                    android:layout_alignLeft="@+id/cs1_fader1"
+                    android:layout_alignStart="@+id/cs1_fader1" />
+
+        </RelativeLayout>
+
+
+        <!-- Slider 2 -->
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+            <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cs1_fader2"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@drawable/fader"
+                    android:thumb="@drawable/fader_thumb"
+                    android:progressTint="#ffffff" />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Slider 2"
+                    android:textSize="@dimen/my_text_size"
+                    android:textColor="#000"
+                    android:id="@+id/cs1_label_fader2"
+                    android:layout_below="@+id/cs1_fader2"
+                    android:layout_alignLeft="@+id/cs1_fader2"
+                    android:layout_alignStart="@+id/cs1_fader2" />
+
+        </RelativeLayout>
+
+
+
+        <!-- Toggle y 3 botones -->
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+
+            <ToggleButton
+                    android:layout_width="@dimen/my_toggle"
+                    android:layout_height="@dimen/my_toggle"
+                    android:background="@drawable/toggle"
+                    android:textOff=""
+                    android:textOn=""
+                    android:id="@+id/cs1_toggle1"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/cs1_button1"
+                    android:layout_toStartOf="@+id/cs1_button1"
+                    android:layout_marginRight="70dp"
+                    android:layout_marginEnd="70dp"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Loop"
+                    android:textSize="@dimen/my_text_size"
+                    android:id="@+id/cs1_label_toggle1"
+                    android:layout_below="@+id/cs1_toggle1"
+                    android:layout_alignLeft="@+id/cs1_toggle1"
+                    android:layout_alignStart="@+id/cs1_toggle1"
+                    android:textColor="#000" />
+
+            <Button
+                    android:layout_width="@dimen/my_button"
+                    android:layout_height="@dimen/my_button"
+                    android:background="@drawable/button"
+                    android:textColor="#000"
+                    android:text="A"
+                    android:textSize="@dimen/my_text_size"
+                    android:id="@+id/cs1_button1"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+
+            <!-- texto vacio debajo del boton, pero que a lo mejor luego quieren que lo ponga -->
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/cs1_label_button1"
+                    android:layout_below="@+id/cs1_button1"
+                    android:layout_alignLeft="@+id/cs1_button1"
+                    android:layout_alignStart="@+id/cs1_button1" />
+
+            <!-- este Texto es invisible y sirve solo para centrar toda la botonera
+            <TextView
+                    android:layout_width="27dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cs1_invisible_centered_text"
+                    android:text=""
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/> -->
+
+            <Button
+                    android:layout_width="@dimen/my_button"
+                    android:layout_height="@dimen/my_button"
+                    android:background="@drawable/button"
+                    android:textColor="#000"
+                    android:text="B"
+                    android:textSize="@dimen/my_text_size"
+                    android:id="@+id/cs1_button2"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/cs1_button1"
+                    android:layout_toEndOf="@+id/cs1_button1"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginStart="27dp"/>
+
+            <!-- texto vacio debajo del boton, pero que a lo mejor luego quieren que lo ponga -->
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/cs1_label_button2"
+                    android:layout_below="@+id/cs1_button2"
+                    android:layout_alignLeft="@+id/cs1_button2"
+                    android:layout_alignStart="@+id/cs1_button2" />
+
+            <Button
+                    android:layout_width="@dimen/my_button"
+                    android:layout_height="@dimen/my_button"
+                    android:background="@drawable/button"
+                    android:textColor="#000"
+                    android:text="C"
+                    android:textSize="@dimen/my_text_size"
+                    android:id="@+id/cs1_button3"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/cs1_button2"
+                    android:layout_toEndOf="@+id/cs1_button2"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginStart="27dp" />
+
+            <!-- texto vacio debajo del boton, pero que a lo mejor luego quieren que lo ponga -->
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/cs1_label_button3"
+                    android:layout_below="@+id/cs1_button3"
+                    android:layout_alignLeft="@+id/cs1_button3"
+                    android:layout_alignStart="@+id/cs1_button3" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <!-- Volumen -->
+    <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vol."
+                android:textSize="@dimen/my_text_size"
+                android:textColor="#000"
+                android:id="@+id/cs1_label_vol"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true" />
+
+        <org.soundcool.upv.oscapp.VerticalSeekBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cs1_fader3"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/cs1_label_vol"
+                android:background="@drawable/fader"
+                android:thumb="@drawable/fader_thumb"
+                android:progressTint="#ffffff" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

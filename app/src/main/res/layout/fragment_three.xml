@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="#3DA3B5"
+    tools:context="org.soundcool.upv.oscapp.ThreeFragment">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_weight="8">
+
+        <!-- Aqui van el PANIC, el Fader de Selector de Instrumento MIDI y el Toggle MIDI / VST -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+
+            <ImageButton
+                    android:layout_width="@dimen/my_button"
+                    android:layout_height="@dimen/my_button"
+                    android:id="@+id/cs3_panic"
+                    android:background="@drawable/button"
+                    android:src="@drawable/panic"
+                    android:layout_alignBottom="@+id/cs3_toggle_container"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"/>
+
+
+            <SeekBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cs3_fader1"
+                    android:layout_toEndOf="@+id/cs3_panic"
+                    android:layout_toRightOf="@+id/cs3_panic"
+                    android:layout_toLeftOf="@+id/cs3_toggle_container"
+                    android:layout_toStartOf="@+id/cs3_toggle_container"
+                    android:layout_alignBottom="@+id/cs3_toggle_container"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/fader"
+                    android:thumb="@drawable/fader_thumb"
+                    android:progressTint="#ffffff"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:textSize="@dimen/my_text_size"
+                    android:paddingRight="2dp"
+                    android:paddingLeft="2dp"
+                    android:textColor="#000"
+                    android:background="#fff"
+                    android:id="@+id/cs3_display"
+                    android:layout_above="@+id/cs3_fader1"
+                    android:layout_alignLeft="@+id/cs3_fader1"
+                    android:layout_alignStart="@+id/cs3_fader1"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instrument (MIDI)"
+                    android:textSize="@dimen/my_text_size"
+                    android:textColor="#000"
+                    android:id="@+id/cs3_label_fader1"
+                    android:layout_alignBaseline="@+id/cs3_display"
+                    android:layout_toRightOf="@+id/cs3_display"
+                    android:layout_toEndOf="@+id/cs3_display"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"/>
+
+
+            <!-- Aqui van el toggle MIDI / VST
+            pongo un RelativeLayout para poder centrar el texto-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:id="@+id/cs3_toggle_container"
+                android:layout_centerVertical="true">
+
+                <ToggleButton
+                    android:layout_width="@dimen/my_toggle"
+                    android:layout_height="@dimen/my_toggle"
+                    android:background="@drawable/toggle"
+                    android:textOff=""
+                    android:textOn=""
+                    android:textSize="@dimen/my_text_size"
+                    android:textColor="#000"
+                    android:id="@+id/cs3_toggle"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="VST / MIDI "
+                    android:id="@+id/cs3_label_toggle"
+                    android:layout_below="@+id/cs3_toggle"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="@dimen/my_text_size"
+                    android:textColor="#000"/>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+        <!-- Aqui van los RadioButtons de las Octavas -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="15dp">
+
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/cs3_radio_octaves">
+                <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_octaves"
+                        android:button="@android:color/transparent"
+                        android:textColor="@color/rb_octaves_text"
+                        android:gravity="center"
+                        android:text="C-2"/>
+                <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_octaves"
+                        android:button="@android:color/transparent"
+                        android:textColor="@color/rb_octaves_text"
+                        android:gravity="center"
+                        android:text="C-1"/>
+                <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_octaves"
+                        android:button="@android:color/transparent"
+                        android:textColor="@color/rb_octaves_text"
+                        android:gravity="center"
+                        android:text="C0"/>
+                <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_octaves"
+                        android:button="@android:color/transparent"
+                        android:textColor="@color/rb_octaves_text"
+                        android:gravity="center"
+                        android:text="C1"/>
+                <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_octaves"
+                        android:button="@android:color/transparent"
+                        android:textColor="@color/rb_octaves_text"
+                        android:gravity="center"
+                        android:text="C2"/>
+                <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_octaves"
+                        android:button="@android:color/transparent"
+                        android:textColor="@color/rb_octaves_text"
+                        android:gravity="center"
+                        android:text="C3"
+                        android:id="@+id/cs3_radio_c3"/>
+                <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_octaves"
+                        android:button="@android:color/transparent"
+                        android:textColor="@color/rb_octaves_text"
+                        android:gravity="center"
+                        android:text="C4"/>
+                <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_octaves"
+                        android:button="@android:color/transparent"
+                        android:textColor="@color/rb_octaves_text"
+                        android:gravity="center"
+                        android:text="C5"/>
+                <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_octaves"
+                        android:button="@android:color/transparent"
+                        android:textColor="@color/rb_octaves_text"
+                        android:gravity="center"
+                        android:text="C6"/>
+                <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_octaves"
+                        android:button="@android:color/transparent"
+                        android:textColor="@color/rb_octaves_text"
+                        android:gravity="center"
+                        android:text="C7"/>
+                <RadioButton
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rb_octaves"
+                        android:button="@android:color/transparent"
+                        android:textColor="@color/rb_octaves_text"
+                        android:gravity="center"
+                        android:text="C8"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+
+        <!-- EL PIANO VA EN ESTE LAYOUT
+        (a lo mejor es redundante y con el ImageView sobraria, pero es como lo he hecho en la Prueba)-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:id="@+id/cs3_ViewGroup1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/cs3_image_view1"/>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vol."
+            android:textSize="@dimen/my_text_size"
+            android:textColor="#000"
+            android:id="@+id/cs3_label_vol"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <org.soundcool.upv.oscapp.VerticalSeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cs3_fader2"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/cs3_label_vol"
+            android:background="@drawable/fader"
+            android:thumb="@drawable/fader_thumb"
+            android:progressTint="#ffffff"
+            android:layout_marginTop="25dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
