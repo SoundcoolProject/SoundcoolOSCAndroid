@@ -1,8 +1,9 @@
 # SoundcoolOSCAndroid
 This is the first version of the Soundcool OSC App for Android
 
+The Soundcool OSC app for Android is Copyright 2017, Universitat Politècnica de València. Please see the "BSD-3-Clause" tab or https://github.com/SoundcoolProject/SoundcoolOSCAndroid/blob/master/LICENSE for the full copyright notice.
 
-This project uses the JavaOSC library with the following Copyright (c) 2002-2014, Chandrasekhar Ramakrishnan / Illposed Software
+This project also uses the JavaOSC library, which is Copyright (c) 2002-2014, Chandrasekhar Ramakrishnan / Illposed Software
 All rights reserved.
 
 * Redistributions of source code must retain the above copyright notice, this
