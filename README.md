@@ -1,7 +1,5 @@
 # SoundcoolOSCAndroid
-This is the first version of the Soundcool OSC App for Android.
-
-Soundcool (http://soundcool.org) is an innovative system for collaborative music education at primary and secondary levels. The system is based on the use of smartphones, tablets, Kinect and the MAX/MSP/Jitter programming environment. Currently, Soundcool is being used at different educational institutions from Spain, Portugal, Italy and Romania through an EU-funded Erasmus+ project. Our system is a creative development environment that promotes sound and music creation by the students themselves. The pedagogical architecture of Soundcool is based on three music education scenarios that allow interaction between the various agents involved in the classroom. The digital “arrangements” developed with Soundcool by the students are controlled by themselves using mobile devices and the Open Sound Control (OSC) protocol. 
+Soundcool (http://soundcool.org) is an innovative system for music education at primary and secondary levels based on collaborative creation. The system is based on the use of smartphones, tablets, Kinect, Open Sound Control and the MAX/MSP/Jitter programming environment. Currently, Soundcool is being used at different educational institutions from Spain, Portugal, Italy and Romania through an EU-funded Erasmus+ project. Our system is a creative development environment that promotes sound and music creation collaboratively by the students themselves. The pedagogical architecture of Soundcool is based on three music education scenarios that allow interaction between the various agents involved in the classroom. The digital “arrangements” developed with Soundcool by the students are controlled by using mobile devices and the Open Sound Control (OSC) protocol. 
 
 Thus, Soundcool OSC App provides a number of music control surfaces to control the Soundcool system via WiFi.
 
@@ -19,7 +17,7 @@ All rights reserved.
   this list of conditions and the following disclaimer in the documentation
   and/or other materials provided with the distribution.
 
-* Neither the name of the {organization} nor the names of its
+* Neither the name of the organization nor the names of its
   contributors may be used to endorse or promote products derived from
   this software without specific prior written permission.
 
