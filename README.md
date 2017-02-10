@@ -1,5 +1,11 @@
 # SoundcoolOSCAndroid
-This is the first version of the Soundcool OSC App for Android
+This is the first version of the Soundcool OSC App for Android.
+
+Soundcool (http://soundcool.org) is an innovative system for collaborative music education at primary and secondary levels. The system is based on the use of smartphones, tablets, Kinect and the MAX/MSP/Jitter programming environment. Currently, Soundcool is being used at different educational institutions from Spain, Portugal, Italy and Romania through an EU-funded Erasmus+ project. Our system is a creative development environment that promotes sound and music creation by the students themselves. The pedagogical architecture of Soundcool is based on three music education scenarios that allow interaction between the various agents involved in the classroom. The digital “arrangements” developed with Soundcool by the students are controlled by themselves using mobile devices and the Open Sound Control (OSC) protocol. 
+
+Thus, Soundcool OSC App provides a number of music control surfaces to control the Soundcool system via WiFi.
+
+This app has been supported by the Generalitat Valenciana Grant AICO/2015/120.
 
 The Soundcool OSC app for Android is Copyright 2017, Universitat Politècnica de València. Please see the "BSD-3-Clause" tab or https://github.com/SoundcoolProject/SoundcoolOSCAndroid/blob/master/LICENSE for the full copyright notice.
 
